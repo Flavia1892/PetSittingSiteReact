@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.dark {
+  background-color: blue;
+}
+.light{
+  background-image: linear-gradient(to right, rgb(237, 165, 77),rgb(233, 171, 90),rgb(240, 208, 147),rgb(255, 254, 252));
+}
+.imageLogo {
+  border-radius: 100px;
+  border: 1px solid black;
+}
