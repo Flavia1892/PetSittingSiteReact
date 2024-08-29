@@ -5,7 +5,7 @@ function Title() {
   return (
     <>
       <div
-        className="light text-6xl text-indigo-700 font-bold py-10 banner"
+        className="light text-6xl text-indigo-900 font-bold py-10 banner"
         id="title"
       >
         {" "}

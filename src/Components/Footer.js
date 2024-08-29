@@ -15,14 +15,14 @@ export function Component() {
             name="Flowbite"
           />
           <Footer.LinkGroup>
-            <Footer.Link href="#">About</Footer.Link>
+            <Footer.Link href="#">About us</Footer.Link>
             <Footer.Link href="#">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">Licensing</Footer.Link>
-            <Footer.Link href="#">Contact</Footer.Link>
+            <Footer.Link href="#">FAQ</Footer.Link>
+            <Footer.Link href="contact">Contact</Footer.Link>
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />
-        <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+        <Footer.Copyright href="homepage" by="Flowbite™" year={2024} />
       </div>
     </Footer>
   );

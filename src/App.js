@@ -3,6 +3,7 @@ import HomePage from "./Pages/HomePage";
 import Layout from "./Pages/Layout";
 import PageNotFound from "./Pages/PageNotFound";
 import Sitters from "./Pages/Sitters";
+import Contact from "./Pages/Contact";
 import React from "react";
 import {
   Route,
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="homepage" element={<HomePage />} />
       <Route path="sitters" element={<Sitters />} />
+      <Route path="contact" element={<Contact />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )
