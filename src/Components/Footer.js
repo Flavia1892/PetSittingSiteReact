@@ -15,8 +15,8 @@ export function Component() {
             name="Flowbite"
           />
           <Footer.LinkGroup>
-            <Footer.Link href="#">About us</Footer.Link>
-            <Footer.Link href="#">Privacy Policy</Footer.Link>
+            <Footer.Link href="aboutus">About us</Footer.Link>
+            <Footer.Link href="privacy">Privacy Policy</Footer.Link>
             <Footer.Link href="#">FAQ</Footer.Link>
             <Footer.Link href="contact">Contact</Footer.Link>
           </Footer.LinkGroup>

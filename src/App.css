@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 .banner {
   display: flex;
@@ -29,6 +29,8 @@
 .containerNav {
   display: flex;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 .rowNav {
   width: 100%;
@@ -58,27 +60,40 @@
   height: 100%;
   text-decoration: none;
   color: black;
-
 }
-.colNav:hover{
+.colNav:hover {
   background-color: rgb(250, 246, 246);
   color: black;
 }
-#dropdown-basic{
+#dropdown-basic {
   background-color: transparent;
   color: black;
-  border:none;
+  border: none;
   font-size: 20px;
   font-weight: bold;
 }
-.imgError{
+.imgError {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+.map-container {
+  height: 500px;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.privacyPolicy {
+  display: flex;
+  text-align: center;
+  border: 2px solid black;
+}
+.imgAboutUs{
+  border:1px solid black;
+  border-radius: 30px;
+  margin:auto;
 
- 
-
+}
 
