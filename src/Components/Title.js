@@ -9,7 +9,7 @@ function Title() {
         id="title"
       >
         {" "}
-        <div>Pet Sitters United</div>
+        <div id="petSittersUnited">Pet Sitters United</div>
         <img
           className="imageLogo mt-3 shadow-md"
           src={cat}

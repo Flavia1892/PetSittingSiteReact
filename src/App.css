@@ -90,10 +90,65 @@
   text-align: center;
   border: 2px solid black;
 }
-.imgAboutUs{
-  border:1px solid black;
+.imgAboutUs {
+  border: 1px solid black;
   border-radius: 30px;
-  margin:auto;
-
+  margin: auto;
+}
+.founderPicture {
+  border-radius: 50px;
+  margin-top: 40px;
+  z-index: 9;
+}
+.containerFounderPicture {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  z-index: 9;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.containerFounderPicture:hover .overlay {
+  opacity: 1;
+}
+.founderRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .overlay {
+    font-size: 10px;
+    height: 50%;
+  }
+  .colNav {
+    font-size: 15px;
+  }
+  #dropdown-basic {
+    font-size: 15px;
+  }
+  #petSittersUnited {
+    font-size: 25px;
+  }
+  .founderWrite {
+    font-size: 10px;
+  }
+}
