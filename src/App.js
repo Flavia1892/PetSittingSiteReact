@@ -6,6 +6,7 @@ import Sitters from "./Pages/Sitters";
 import Contact from "./Pages/Contact";
 import Privacy from "./Pages/Privacy";
 import AboutUs from "./Pages/AboutUs";
+import Faq from "./Pages/Faq";
 import React from "react";
 import {
   Route,
@@ -13,7 +14,6 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="privacy" element={<Privacy />} />
       <Route path="aboutus" element={<AboutUs />} />
+      <Route path="faq" element={<Faq />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

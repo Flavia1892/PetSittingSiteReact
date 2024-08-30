@@ -17,7 +17,7 @@ export function Component() {
           <Footer.LinkGroup>
             <Footer.Link href="aboutus">About us</Footer.Link>
             <Footer.Link href="privacy">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">FAQ</Footer.Link>
+            <Footer.Link href="faq">FAQ</Footer.Link>
             <Footer.Link href="contact">Contact</Footer.Link>
           </Footer.LinkGroup>
         </div>
