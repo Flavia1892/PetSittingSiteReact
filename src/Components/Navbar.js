@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 
 function Navbar() {
+  
   return (
     <>
       <div className="containerNav">
@@ -11,13 +12,15 @@ function Navbar() {
             Home
           </Link>
 
-          <div className="colNav">Our Mission</div>
+          <Link to="ourmission" className="colNav">
+            Our Mission
+          </Link>
+          
           <Link to="sitters" className="colNav">
             Our sitters
           </Link>
 
           <Dropdown className="colNav">
-            
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               Prices
             </Dropdown.Toggle>

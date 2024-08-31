@@ -25,6 +25,7 @@ function Faq() {
       <div class="text-center font-bold text-4xl mt-4 mb-4 text-indigo-900">
         Frequently Asked Questions<br></br>(FAQ)
       </div>
+
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
@@ -34,7 +35,6 @@ function Faq() {
           </Accordion.Header>
           <Accordion.Body>
             <p class="italic">
-              {" "}
               Pet Sitter is a verified and trusted pet lover with experience,
               who can offer pet boarding in their home, or visit pets at your
               place or dog walking.
@@ -55,6 +55,7 @@ function Faq() {
             </p>
           </Accordion.Body>
         </Accordion.Item>
+
         <Accordion.Item eventKey="2">
           <Accordion.Header>
             <p class="font-bold text-2xl hover:underline">
@@ -143,7 +144,7 @@ function Faq() {
             console.log(quote);
           }}
         >
-          Random Quote
+          Quote me
         </button>
         <div class=" flex justify-center">
           <div class="mt-4 mb-4">

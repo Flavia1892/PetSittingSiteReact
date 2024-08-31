@@ -3,6 +3,7 @@ import HomePage from "./Pages/HomePage";
 import Layout from "./Pages/Layout";
 import PageNotFound from "./Pages/PageNotFound";
 import Sitters from "./Pages/Sitters";
+import OurMission from "./Pages/OurMission";
 import Contact from "./Pages/Contact";
 import Privacy from "./Pages/Privacy";
 import AboutUs from "./Pages/AboutUs";
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="homepage" element={<HomePage />} />
       <Route path="sitters" element={<Sitters />} />
+      <Route path="ourmission" element={<OurMission />} />
       <Route path="contact" element={<Contact />} />
       <Route path="privacy" element={<Privacy />} />
       <Route path="aboutus" element={<AboutUs />} />
