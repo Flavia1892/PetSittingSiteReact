@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+
 .banner {
   display: flex;
   flex-direction: column;
