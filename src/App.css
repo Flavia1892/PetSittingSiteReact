@@ -27,7 +27,9 @@
 .imageLogo {
   border-radius: 100px;
   border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .containerNav {
   display: flex;
   width: 100%;
@@ -146,15 +148,79 @@
   flex-direction: row;
   justify-content: space-around;
   row-gap: 30px;
+  background: linear-gradient(
+    0.25turn,
+    white,
+    whitesmoke,
+    #ecbe78,
+    #fdd5ae,
+    #ecc196,
+    whitesmoke,
+    white
+  );
+  border-radius: 30px;
 }
 .sittercard {
   z-index: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .zoom {
   transition: transform 0.2s;
 }
 .zoom:hover {
   transform: scale(1.1);
+}
+.sitterTitle {
+  background: linear-gradient(to right, #080808, #151515, #9e9b9e, #efefee);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-image: linear-gradient(black, rgb(103, 99, 99), grey);
+  color: white;
+  transform: rotateY(180deg);
+  padding-top:50px;
 }
 
 @media screen and (max-width: 500px) {

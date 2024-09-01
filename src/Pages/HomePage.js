@@ -21,7 +21,6 @@ function HomePage() {
   };
 
   const modalDisplayed = sessionStorage.getItem("modalDisplayed");
-  console.log(Cookies.get("cookieConsent"));
 
   return (
     <>

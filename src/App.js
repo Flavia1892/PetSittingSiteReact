@@ -6,6 +6,7 @@ import Sitters from "./Pages/Sitters";
 import OurMission from "./Pages/OurMission";
 import Contact from "./Pages/Contact";
 import Privacy from "./Pages/Privacy";
+import SitterPageDetails from "./Pages/SitterPageDetails";
 import AboutUs from "./Pages/AboutUs";
 import Faq from "./Pages/Faq";
 import React from "react";
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="homepage" element={<HomePage />} />
       <Route path="sitters" element={<Sitters />} />
+      <Route path='/sitterpagedetails/:id'element={<SitterPageDetails />} />
       <Route path="ourmission" element={<OurMission />} />
       <Route path="contact" element={<Contact />} />
       <Route path="privacy" element={<Privacy />} />

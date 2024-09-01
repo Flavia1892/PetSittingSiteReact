@@ -5,17 +5,14 @@ import data from "../props/SittersData";
 function Sitters() {
   let sitters = data.persons;
 
-  console.log(sitters);
-  console.log(Array.isArray(sitters));
-
   return (
     <>
-      <p class="text-3xl">Our sitters</p>
+     
 
       <div class="container sitterContainer mb-4">
-        <div class="rowSitters">
+        <div class="row font-bold text-5xl justify-center pt-2 pb-2 mb-5 mt-4 sitterTitle">Our sitters</div>
+        <div class="rowSitters pb-4 pt-4">
           {sitters.map((sitter) => {
-            //console.log(sitter);
             return <SitterCard {...sitter} />;
           })}
         </div>

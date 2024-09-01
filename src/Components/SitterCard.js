@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 function SitterCard(person) {
-  console.log("the person is:");
-  console.log(person);
+  const navigate = useNavigate();
   let name = person.name;
-  console.log(name);
+
+  let id = person.id.value;
+
   return (
     <div className="sittercard">
       <div class="zoom">
@@ -26,11 +28,20 @@ function SitterCard(person) {
               </p>
               <p class="mb-3">
                 <b>Email:</b>
-                {person.email}
+                <a href="mailto:petsittersunited@gmail.com">
+                  <span class="text-blue-600 underline">{person.email}</span>
+                </a>
               </p>
             </Card.Text>
 
-            <Button variant="primary">Profile</Button>
+            <Button
+              variant="primary"
+              onClick={() => {
+                navigate(`/sitterpagedetails/${id}`);
+              }}
+            >
+              Profile
+            </Button>
           </Card.Body>
         </Card>
       </div>
