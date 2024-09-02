@@ -224,9 +224,14 @@
 }
 .colPrice {
   max-width: 400px;
-  margin:auto;
+  margin: auto;
 }
-
+@media screen and (min-height: 500px) {
+  .rowSitters {
+    padding-bottom: 270px;
+    padding-top: 100px;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .overlay {
@@ -245,7 +250,7 @@
   .founderWrite {
     font-size: 10px;
   }
-  .fontQuerry{
-    font-size:20px;
+  .fontQuerry {
+    font-size: 20px;
   }
 }
