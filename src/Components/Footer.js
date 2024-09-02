@@ -16,6 +16,7 @@ export function Component() {
           />
           <Footer.LinkGroup>
             <Footer.Link href="aboutus">About us</Footer.Link>
+            <Footer.Link >Mo-Fri: 9-16 <br></br>Sa-Su:10-14</Footer.Link>
             <Footer.Link href="privacy">Privacy Policy</Footer.Link>
             <Footer.Link href="faq">FAQ</Footer.Link>
             <Footer.Link href="contact">Contact</Footer.Link>

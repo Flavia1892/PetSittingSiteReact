@@ -47,6 +47,10 @@ function Navbar() {
                 }}>Daily visits</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+
+          <Link to="contact" className="colNav">
+            Contact
+          </Link>
         </div>
       </div>
     </>

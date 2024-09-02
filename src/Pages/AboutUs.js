@@ -43,7 +43,7 @@ function AboutUs() {
             <p class="font-bold text-3xl text-center mt-5">Statistici</p>
             <ul class="list-disc">
               <li>
-                avem momentan 10 pet sitteri aprobati in judetul Brasov,
+                avem momentan 9 pet sitteri aprobati in judetul Brasov,
                 Romania. Insa nu ne oprim aici, urmeaza si alte orase din
                 Romania.
               </li>
