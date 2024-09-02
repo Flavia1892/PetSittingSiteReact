@@ -3,7 +3,6 @@
 @import "tailwindcss/utilities";
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-
 .banner {
   display: flex;
   flex-direction: column;
@@ -221,8 +220,13 @@
   background-image: linear-gradient(black, rgb(103, 99, 99), grey);
   color: white;
   transform: rotateY(180deg);
-  padding-top:50px;
+  padding-top: 50px;
 }
+.colPrice {
+  max-width: 400px;
+  margin:auto;
+}
+
 
 @media screen and (max-width: 500px) {
   .overlay {
