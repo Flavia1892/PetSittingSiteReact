@@ -16,8 +16,7 @@ function SitterPageDetails() {
 
   return (
     <>
-      <div>SitterPageDetails</div>
-      <div class="container justify-center align-center ">
+      <div class="container justify-center align-center mt-3">
         <div class="col  border-2 border-gray-900 rounded-xl text-center mb-4">
           <p class="text-3xl rounded-xl pt-3  pb-3 mb-4 text-bold bg-gradient-to-r from-amber-500 ...">
             {sitter.name.title} {sitter.name.first} {sitter.name.last}{" "}
@@ -33,7 +32,10 @@ function SitterPageDetails() {
                 ></img>
               </div>
               <div class="flip-card-back">
-                <p class="font-bold text-lg">Hi, my name is {sitter.name.first}.</p><br></br>
+                <p class="font-bold text-lg">
+                  Hi, my name is {sitter.name.first}.
+                </p>
+                <br></br>
                 <p>
                   I would love to take care our you fur baby/babies. Please take
                   a look at my details below and let's see if we are a match!

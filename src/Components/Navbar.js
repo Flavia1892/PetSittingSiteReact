@@ -35,8 +35,16 @@ function Navbar() {
               >
                 House Sitting
               </Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Pet Boarding</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Daily visits</Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => {
+                  navigate(`/pricepage/102`);
+                }}
+              >
+                Pet Boarding
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                  navigate(`/pricepage/103`);
+                }}>Daily visits</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
