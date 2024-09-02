@@ -15,25 +15,27 @@ function OurMission() {
     fetch("https://catfact.ninja/fact")
       .then((response) => response.json())
       .then((responseJSON) => {
-        console.log(responseJSON);
         setfact(responseJSON.fact);
-        console.log(fact);
       });
   }
 
   return (
     <>
       <p class="text-5xl text-center pt-3 pb-3 font-serif">Our Mission</p>
-      <div class="container ">
+      <div class="container">
         <div class="col missionCol">
-          <p class="text-4xl font-bold italic text-rock-300 missionSmall">Our Promise</p>
+          <p class="text-4xl font-bold italic text-rock-300 missionSmall">
+            Our Promise
+          </p>
           <p class="text-3xl pt-3 pb-3 font-light missionSmall">
             Pet Sitters United® will provide quality and excellent care to your
             pets and home, while conducting our business with honesty and
             integrity. Our team will be conscientious, thorough, dependable and
             helpful. Our reputation depends on your satisfaction.
           </p>
-          <p class="text-4xl font-bold italic text-rock-300 missionSmall">Our Mission</p>
+          <p class="text-4xl font-bold italic text-rock-300 missionSmall">
+            Our Mission
+          </p>
           <p class="text-3xl pt-3 pb-3 font-light missionSmall">
             Pet Sitters United® mission is to provide “Peace of Mind” to pet
             owners in the care of their pets. We want to provide the absolute
@@ -67,8 +69,13 @@ function OurMission() {
               {" "}
               Professional and friendly pet care providers
             </li>
-            <li class="text-xl missionSmall"> One on one time with your pet(s)</li>
-            <li class="text-xl missionSmall">We will be there for you and your pets!</li>
+            <li class="text-xl missionSmall">
+              {" "}
+              One on one time with your pet(s)
+            </li>
+            <li class="text-xl missionSmall">
+              We will be there for you and your pets!
+            </li>
           </ol>
           <p class="text-4xl missionSmall font-serif mb-3 mt-3 text-center border-2 border-black pt-2 pb-2 pl-2 pr-2 bg-gradient-to-r from-gray-900 to-gray-400 ... text-white">
             You can relax knowing our “TEAM” is on the JOB! We work as a team,
@@ -98,7 +105,7 @@ function OurMission() {
 
           <div class="pt-3 pb-3 text-center mt-8">
             <button
-              class="border-2 border-black pt-1 pb-1 pl-1 pr-1 bg-white mb-2"
+              class="border-2 border-black pt-1 pb-1 pl-1 pr-1 bg-gray-300  rounded-xl mb-2"
               type="button"
               onClick={getRandomCatfacts}
             >

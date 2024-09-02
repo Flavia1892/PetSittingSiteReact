@@ -275,6 +275,7 @@
   transform: scale(1.05);
 }
 
+
 @media screen and (min-height: 500px) {
   .rowSitters {
     padding-bottom: 270px;
@@ -288,10 +289,10 @@
     height: 50%;
   }
   .colNav {
-    font-size: 15px;
+    font-size: 12px;
   }
   #dropdown-basic {
-    font-size: 15px;
+    font-size: 12px;
   }
   #petSittersUnited {
     font-size: 25px;
@@ -304,6 +305,5 @@
   }
   .missionSmall {
     font-size: 20px;
-
   }
 }

@@ -14,9 +14,28 @@ function Navbar() {
             Home
           </Link>
 
-          <Link to="ourmission" className="colNav">
-            Our Mission
-          </Link>
+          <Dropdown className="colNav">
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              About Us
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item
+                onClick={() => {
+                  navigate(`ourmission`);
+                }}
+              >
+                Our Mission
+              </Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => {
+                  navigate(`aboutus`);
+                }}
+              >
+                About Us
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
           <Link to="sitters" className="colNav">
             Our sitters
@@ -42,9 +61,13 @@ function Navbar() {
               >
                 Pet Boarding
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => {
+              <Dropdown.Item
+                onClick={() => {
                   navigate(`/pricepage/103`);
-                }}>Daily visits</Dropdown.Item>
+                }}
+              >
+                Daily visits
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 

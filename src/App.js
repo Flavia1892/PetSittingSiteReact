@@ -10,6 +10,7 @@ import SitterPageDetails from "./Pages/SitterPageDetails";
 import AboutUs from "./Pages/AboutUs";
 import Faq from "./Pages/Faq";
 import Price from "./Pages/Price";
+import Booking from "./Pages/Booking";
 import React from "react";
 import {
   Route,
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="aboutus" element={<AboutUs />} />
       <Route path="faq" element={<Faq />} />
       <Route path='/pricepage/:id'element={<Price />} />
+      <Route path="book" element={<Booking />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

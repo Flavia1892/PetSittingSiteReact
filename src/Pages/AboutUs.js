@@ -16,8 +16,8 @@ function AboutUs() {
             alt="PetSittersUnited"
           ></img>
           <div class="row justify-center">
-            <p class="text-center font-bold text-4xl mt-4"> Our story</p>
-            <p class="mt-3">
+            <p class="text-center font-bold text-4xl mt-4 "> Our story</p>
+            <p class="mt-3 bg-gradient-to-l from-amber-500 to-white">
               Iubirea pentru animale a fost prezenta in viata noastra inca din
               frageda pruncie. Daca ne intrebi ce super putere ne-am dori, ti-am
               raspunde ca ne-ar placea mult sa putem comunica cu animalele. Si
@@ -30,7 +30,7 @@ function AboutUs() {
               si animalutele in cautare de un adapost temporar.
             </p>
             <p class="font-bold text-3xl text-center mt-5">Valori & Viziune</p>
-            <p class="mt-3">
+            <p class="mt-3 bg-gradient-to-r from-amber-500 to-white">
               Noi rezonam cu un stil de viata activ. Ne place sa calatorim, sa
               fim implicati in tot felul de proiecte si deci, in viata noastra,
               exista si perioade mai incarcate. Si voi, ca si noi, iubiti
@@ -41,7 +41,7 @@ function AboutUs() {
               ce voi va puteti bucura de vacante sau cariera.
             </p>
             <p class="font-bold text-3xl text-center mt-5">Statistici</p>
-            <ul class="list-disc">
+            <ul class="list-disc bg-gradient-to-l from-amber-500 to-white">
               <li>
                 avem momentan 9 pet sitteri aprobati in judetul Brasov,
                 Romania. Insa nu ne oprim aici, urmeaza si alte orase din

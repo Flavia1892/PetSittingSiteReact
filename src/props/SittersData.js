@@ -24,11 +24,13 @@ export default data = {
           latitude: "66.2873",
           longitude: "53.4476",
         },
+
         timezone: {
           offset: "-9:00",
           description: "Alaska",
         },
       },
+      preference: "cat",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -90,6 +92,7 @@ export default data = {
           description: "Adelaide, Darwin",
         },
       },
+      preference: "cat",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -150,6 +153,7 @@ export default data = {
           description: "Beijing, Perth, Singapore, Hong Kong",
         },
       },
+      preference: "dog",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -210,6 +214,7 @@ export default data = {
           description: "Atlantic Time (Canada), Caracas, La Paz",
         },
       },
+      preference: "fish",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -270,6 +275,7 @@ export default data = {
           description: "Pacific Time (US & Canada)",
         },
       },
+      preference: "rodents",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -330,6 +336,7 @@ export default data = {
           description: "Brussels, Copenhagen, Madrid, Paris",
         },
       },
+      preference: "birds",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -390,6 +397,7 @@ export default data = {
           description: "Bangkok, Hanoi, Jakarta",
         },
       },
+      preference: "birds",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -450,6 +458,7 @@ export default data = {
           description: "Hawaii",
         },
       },
+      preference: "fish",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -510,6 +519,7 @@ export default data = {
           description: "Bombay, Calcutta, Madras, New Delhi",
         },
       },
+      preference: "dog",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit nibh sit amet massa aliquam, eu vehicula velit pulvinar. Sed at molestie elit. Vivamus consequat malesuada massa id auctor. Maecenas vulputate, massa vel vehicula blandit, metus odio rhoncus mauris, a maximus arcu dolor quis diam. Nam quis venenatis tellus, non volutpat libero. Donec hendrerit ex ut dignissim sodales. Praesent eu sagittis tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Mauris ultrices lacus nec ex ultricies venenatis. Nam ullamcorper, libero ut mollis maximus, sem velit lacinia sem, nec imperdiet massa metus eget urna. Quisque vitae justo ultrices, malesuada ante et, semper elit. Phasellus mauris ante, interdum sed nulla vel, tristique porta est. Suspendisse imperdiet, est sed pulvinar tincidunt, magna massa faucibus leo, quis tincidunt arcu nisl non erat. Vestibulum pharetra, dolor porttitor accumsan commodo, massa odio scelerisque sem, sed ornare nisl augue tristique lorem. Curabitur euismod sagittis lacus, vel pellentesque nisl mollis nec. Pellentesque maximus tempus libero non faucibus. Aliquam felis odio, finibus a magna id, porta varius felis. In elementum dignissim lectus quis vehicula. Etiam aliquam a sem vehicula dignissim. Nullam porttitor nec orci id hendrerit. Nunc condimentum sapien quis nunc lacinia posuere. Ut nec purus a tortor venenatis scelerisque in a dui. Cras malesuada cursus fermentum. In ultrices risus ac nulla scelerisque iaculis.",
 
@@ -545,6 +555,5 @@ export default data = {
       },
       nat: "RS",
     },
-    
   ],
 };

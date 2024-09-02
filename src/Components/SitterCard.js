@@ -34,14 +34,35 @@ function SitterCard(person) {
               </p>
             </Card.Text>
 
-            <Button
-              variant="primary"
-              onClick={() => {
-                navigate(`/sitterpagedetails/${id}`);
-              }}
-            >
-              Profile
-            </Button>
+            <div class="text-center">
+              <Button
+                variant="primary"
+                onClick={() => {
+                  navigate(`/sitterpagedetails/${id}`);
+                }}
+              >
+                Profile
+              </Button>
+              <button
+                type="button"
+                class="text-white bg-blue-500 pt-1 pb-2 pl-2 pr-2 rounded-md ml-3"
+                onClick={() => {
+                  navigate("/book",{state:person});
+                }}
+              >
+                Book
+              </button>
+
+              <button
+                type="button"
+                class="text-white bg-blue-500 pt-1 pb-2 pl-2 pr-2 rounded-md ml-3"
+                onClick={() => {
+                  navigate("/book",{state:person});
+                }}
+              >
+                Appointments
+              </button>
+            </div>
           </Card.Body>
         </Card>
       </div>
