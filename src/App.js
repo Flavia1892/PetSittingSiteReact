@@ -9,6 +9,7 @@ import Privacy from "./Pages/Privacy";
 import SitterPageDetails from "./Pages/SitterPageDetails";
 import AboutUs from "./Pages/AboutUs";
 import Faq from "./Pages/Faq";
+import Price from "./Pages/Price";
 import React from "react";
 import {
   Route,
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="privacy" element={<Privacy />} />
       <Route path="aboutus" element={<AboutUs />} />
       <Route path="faq" element={<Faq />} />
+      <Route path='/pricepage/:id'element={<Price />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

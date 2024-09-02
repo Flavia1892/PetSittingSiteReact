@@ -1,9 +1,11 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import data from "../props/mockDataPrices";
 
 function Navbar() {
-  
+  const navigate = useNavigate();
+  let id = data.prices[0].id;
   return (
     <>
       <div className="containerNav">
@@ -15,7 +17,7 @@ function Navbar() {
           <Link to="ourmission" className="colNav">
             Our Mission
           </Link>
-          
+
           <Link to="sitters" className="colNav">
             Our sitters
           </Link>
@@ -26,9 +28,23 @@ function Navbar() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">House Sitting</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Pet Boarding</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Daily visits</Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => {
+                  navigate(`/pricepage/${id}`);
+                }}
+              >
+                House Sitting
+              </Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => {
+                  navigate(`/pricepage/102`);
+                }}
+              >
+                Pet Boarding
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                  navigate(`/pricepage/103`);
+                }}>Daily visits</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
