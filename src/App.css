@@ -274,7 +274,7 @@
 .carousel__img:hover {
   transform: scale(1.05);
 }
-.pictHome{
+.pictHome {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div.background {
@@ -293,11 +293,9 @@ div.transbox {
   backdrop-filter: blur(5px);
   padding: 20px;
   margin: 30px;
-  height:200px;
+  height: 200px;
   font-weight: bold;
 }
-
-
 
 @media screen and (min-height: 500px) {
   .rowSitters {
@@ -307,12 +305,12 @@ div.transbox {
 }
 
 @media screen and (max-width: 500px) {
-  div.background{
-    width:400px;
+  div.background {
+    width: 400px;
   }
-  div.transbox{
-    width:300px;
-    height:300px;
+  div.transbox {
+    width: 300px;
+    height: 300px;
   }
   .overlay {
     font-size: 10px;
@@ -336,7 +334,7 @@ div.transbox {
   .missionSmall {
     font-size: 20px;
   }
-  .titleHome{
+  .titleHome {
     font-size: 30px;
   }
 }
