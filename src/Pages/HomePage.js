@@ -104,7 +104,7 @@ function HomePage() {
           </button>
         </div>
 
-        <div class="border-2 border-black mt-5">
+        <div class="border-2 border-gray-300 mt-5">
           <Carousel images={images} />
         </div>
 

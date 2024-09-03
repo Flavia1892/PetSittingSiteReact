@@ -307,6 +307,13 @@ div.transbox {
 }
 
 @media screen and (max-width: 500px) {
+  div.background{
+    width:400px;
+  }
+  div.transbox{
+    width:300px;
+    height:300px;
+  }
   .overlay {
     font-size: 10px;
     height: 50%;
