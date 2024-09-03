@@ -31,6 +31,15 @@ function HomePage() {
 
   const modalDisplayed = sessionStorage.getItem("modalDisplayed");
 
+  //Modal for Become a Sitter Button
+  const [reveal, setReveal] = useState(false);
+  const handleOpen = () => {
+    setReveal(true);
+  };
+  const handleDisappear = () => {
+    setReveal(false);
+  };
+
   return (
     <>
       <p className="text-6xl text-center mt-3 mb-3 pt-3 pb-3 font-bold titleHome">
@@ -98,11 +107,24 @@ function HomePage() {
         <div class="flex justify-center">
           <button
             type="button"
-            class="font-bold text-xl pt-3 pb-3 pl-2 pr-2 border-2  border-black rounded-xl bg-blue-900 text-white mt-5 "
+            class="font-bold text-xl pt-3 pb-3 pl-2 pr-2 border-2  border-black rounded-xl bg-blue-900 text-white mt-5 hover:bg-blue-500"
+            onClick={handleOpen}
           >
             Become a Pet Sitter
           </button>
         </div>
+
+        <Modal show={reveal} onHide={handleDisappear}>
+          <Modal.Header closeButton>
+            <Modal.Title>So, you want to join our family?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Awesome! We are always on the lookout for new Sitters!<br></br>If
+            you want to join us please send you CV to{" "}
+            <b>petsittersunited@gmail.com</b>
+            <br></br>We will get back to you ASAP!
+          </Modal.Body>
+        </Modal>
 
         <div class="border-2 border-gray-300 mt-5">
           <Carousel images={images} />
