@@ -15,7 +15,7 @@ function FormSubmit(sitterObj) {
   const [endDate, setEndDate] = useState(null);
 
   const firebaseConfig = {
-    apiKey: "AIzaSyCgwdyYKBF7K0eM0IftPQyPCz2yi-oR2ug",
+    apiKey: "",
     authDomain: "flaviapetsittersunited.firebaseapp.com",
     projectId: "flaviapetsittersunited",
     storageBucket: "flaviapetsittersunited.appspot.com",
