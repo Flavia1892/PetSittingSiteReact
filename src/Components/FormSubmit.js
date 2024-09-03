@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 function FormSubmit(sitterObj) {
   const navigate = useNavigate();
+  let [cookies, setCookie] = useCookies(["name"]);
+
   let sitter = sitterObj.sitterObj;
 
   let [firstName, setfirstName] = useState("");
@@ -11,6 +14,9 @@ function FormSubmit(sitterObj) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setCookie("name", firstName, { path: "/" });
+
+    console.log(cookies.name);
 
     const bookingInfo = {
       firstName: firstName,
