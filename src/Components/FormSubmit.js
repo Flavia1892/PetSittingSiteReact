@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FormSubmit(sitterObj) {
+  const navigate = useNavigate();
   let sitter = sitterObj.sitterObj;
 
   let [firstName, setfirstName] = useState("");
@@ -9,7 +11,7 @@ function FormSubmit(sitterObj) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Booking successful! Please wait for telephone confirmation");
+
     const bookingInfo = {
       firstName: firstName,
       lastName: lastName,
@@ -18,7 +20,23 @@ function FormSubmit(sitterObj) {
       sitterLastName: sitter.name.last,
     };
 
-    console.log(JSON.stringify(bookingInfo));
+    fetch("http://localhost:8080/Bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/JSON",
+      },
+      body: JSON.stringify(bookingInfo),
+    })
+      .then((respose) => respose.json())
+      .then((newBooking) => {
+        setfirstName("");
+        setlastName("");
+
+        navigate("/Bookings");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
