@@ -11,10 +11,17 @@ import img2 from "../props/carousel/cat2.jpg";
 import img3 from "../props/carousel/cat3.avif";
 import img4 from "../props/carousel/cat4.jpg";
 import img5 from "../props/blackcat.webp";
+import { useEffect } from "react";
 
 function HomePage() {
   const images = [`${img1}`, `${img2}`, `${img3}`, `${img4}`, `${img5}`];
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, 3000);
+  }, []);
 
   const handleAcceptCookies = () => {
     Cookies.set("cookieConsent", true);
