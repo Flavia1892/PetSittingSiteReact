@@ -3,7 +3,10 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
+
 function SitterCard(person) {
+  
+
   const navigate = useNavigate();
   let name = person.name;
 
@@ -47,7 +50,7 @@ function SitterCard(person) {
                 type="button"
                 class="text-white bg-blue-500 pt-1 pb-2 pl-2 pr-2 rounded-md ml-3"
                 onClick={() => {
-                  navigate("/book",{state:person});
+                  navigate("/book", { state: person });
                 }}
               >
                 Book
@@ -57,7 +60,7 @@ function SitterCard(person) {
                 type="button"
                 class="text-white bg-blue-500 pt-1 pb-2 pl-2 pr-2 rounded-md ml-3"
                 onClick={() => {
-                  navigate("/book",{state:person});
+                  navigate("/bookingsshow", { state: id });
                 }}
               >
                 Appointments

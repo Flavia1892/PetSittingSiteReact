@@ -11,7 +11,7 @@ import AboutUs from "./Pages/AboutUs";
 import Faq from "./Pages/Faq";
 import Price from "./Pages/Price";
 import Booking from "./Pages/Booking";
-
+import BookingsShow from "./Pages/BookingsShow";
 import React from "react";
 import {
   Route,
@@ -34,7 +34,7 @@ const router = createBrowserRouter(
       <Route path="faq" element={<Faq />} />
       <Route path="/pricepage/:id" element={<Price />} />
       <Route path="book" element={<Booking />} />
-
+      <Route path="bookingsshow" element={<BookingsShow />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

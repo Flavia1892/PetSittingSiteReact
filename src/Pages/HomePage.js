@@ -28,7 +28,7 @@ function HomePage() {
   };
 
   const handleRejectCookies = () => {
-    Cookies.remove("cookieConsent");
+    Cookies.remove("cookieConsent", "firstname", "lastname");
   };
 
   const handleClose = () => {
@@ -37,6 +37,15 @@ function HomePage() {
   };
 
   const modalDisplayed = sessionStorage.getItem("modalDisplayed");
+
+  //Modal for success Message at cookie agreement
+  const [success, setSuccess] = useState(false);
+  const handleSuccess = () => {
+    setSuccess(true);
+  };
+  const handleFail = () => {
+    setSuccess(false);
+  };
 
   //Modal for Become a Sitter Button
   const [reveal, setReveal] = useState(false);
@@ -175,6 +184,7 @@ function HomePage() {
                 onClick={() => {
                   handleClose();
                   handleAcceptCookies();
+                  handleSuccess();
                 }}
               >
                 Agree and close
@@ -184,6 +194,7 @@ function HomePage() {
                 onClick={() => {
                   handleClose();
                   handleRejectCookies();
+                  handleSuccess();
                 }}
               >
                 Reject and close
@@ -192,6 +203,12 @@ function HomePage() {
           </Modal>
         )}
       </div>
+      <Modal show={success} onHide={handleFail}>
+        <Modal.Header closeButton>
+          <Modal.Title>Your options have been saved</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Thank you for your choice!</Modal.Body>
+      </Modal>
 
       <sub>Cookie set: {Cookies.get("cookieConsent")}</sub>
     </>
