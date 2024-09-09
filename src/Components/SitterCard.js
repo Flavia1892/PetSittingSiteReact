@@ -75,7 +75,7 @@ function SitterCard(person) {
                     localStorage.getItem("savedSitters")
                   );
                   if (lastList === null) lastList = [];
-                  else {
+                 
                     for (let key in lastList) {
                       if (lastList[key].id.value === id) {
                         isDuplicate = true;
@@ -98,7 +98,7 @@ function SitterCard(person) {
                       alert("Sitter Saved!");
                     }
                     isDuplicate = false;
-                  }
+                  
                 }}
               >
                 Add to favorites

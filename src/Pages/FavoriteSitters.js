@@ -65,7 +65,7 @@ function FavoriteSitters() {
     setCategory(event.target.value);
   };
 
-  if (JSON.parse(localStorage.getItem("savedSitters")).length === 0) {
+  if (JSON.parse(localStorage.getItem("savedSitters")) === null) {
     navigate(`/homepage`);
   }
 
