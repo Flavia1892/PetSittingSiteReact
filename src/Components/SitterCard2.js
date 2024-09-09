@@ -9,6 +9,7 @@ function SitterCard2(person) {
   let name = person.name;
 
   let id = person.id.value;
+ 
   let favoriteSitters = JSON.parse(localStorage.getItem("savedSitters"));
 
   return (
