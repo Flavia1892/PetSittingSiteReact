@@ -12,6 +12,8 @@ import Faq from "./Pages/Faq";
 import Price from "./Pages/Price";
 import Booking from "./Pages/Booking";
 import BookingsShow from "./Pages/BookingsShow";
+import SearchSittersValue from "./Pages/SearchSittersValue";
+import FavoriteSitters from "./Pages/FavoriteSitters";
 import React from "react";
 import {
   Route,
@@ -27,6 +29,8 @@ const router = createBrowserRouter(
       <Route path="homepage" element={<HomePage />} />
       <Route path="sitters" element={<Sitters />} />
       <Route path="/sitterpagedetails/:id" element={<SitterPageDetails />} />
+      <Route path="/searchsittersvalue" element={<SearchSittersValue />} />
+      <Route path="favoritesitters" element={<FavoriteSitters />} />
       <Route path="ourmission" element={<OurMission />} />
       <Route path="contact" element={<Contact />} />
       <Route path="privacy" element={<Privacy />} />

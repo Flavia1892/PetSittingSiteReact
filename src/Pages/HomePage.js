@@ -151,7 +151,7 @@ function HomePage() {
           <div class="flex justify-center">
             <button
               type="button"
-              class="font-bold text-4xl bg-green-600 pt-1 pb-1 pl-2 pr-2 rounded-xl mt-5 "
+              class="font-bold text-4xl bg-green-600 pt-1 pb-1 pl-2 pr-2 border-2 border-black rounded-xl mt-5 hover:bg-green-700 "
               onClick={() => {
                 navigate("/favoritesitters");
               }}

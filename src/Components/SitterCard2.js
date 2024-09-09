@@ -1,15 +1,15 @@
 import React from "react";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
-function SitterCard(person) {
+function SitterCard2(person) {
   const navigate = useNavigate();
   let name = person.name;
 
   let id = person.id.value;
   let favoriteSitters = JSON.parse(localStorage.getItem("savedSitters"));
-  
 
   return (
     <div className="sittercard">
@@ -68,38 +68,19 @@ function SitterCard(person) {
             <Card.Text>
               <button
                 type="button"
-                class="bg-green-600 font-bold text-lg mt-3 pt-1 pb-1 pl-1 pr-1 rounded-lg hover:bg-green-700"
+                class="bg-red-600 font-bold text-xl pt-1 pb-2 pl-2 pr-2 mt-4 rounded-xl"
                 onClick={() => {
-                  let isDuplicate = false;
-
-                  let lastList = JSON.parse(
-                    localStorage.getItem("savedSitters")
-                  );
-                  if (lastList == null) lastList = [];
-
-                  for (let key in lastList) {
-                    if (lastList[key].id.value === id) {
-                      isDuplicate = true;
-                      alert("Sitter already saved");
-                    }
+                  let id = person.id.value;
+                  let arra = JSON.parse(localStorage.getItem("savedSitters"));
+                  for (let key in arra) {
+                    if (arra[key].id.value === id) arra.splice(key, 1);
                   }
-
-                  if (isDuplicate == false) {
-                    lastList.push(person);
-                    localStorage.setItem(
-                      "savedSitters",
-                      JSON.stringify(lastList)
-                    );
-                    lastList = [];
-                    let arra = JSON.parse(localStorage.getItem("savedSitters"));
-
-                    console.log(arra);
-                    alert("Sitter Saved!");
-                  }
-                  isDuplicate = false;
+                  localStorage.setItem("savedSitters", JSON.stringify(arra));
+                  alert("Sitter removed from list");
+                  window.location.reload();
                 }}
               >
-                Add to favorites
+                Delete
               </button>
             </Card.Text>
           </Card.Body>
@@ -109,4 +90,4 @@ function SitterCard(person) {
   );
 }
 
-export default SitterCard;
+export default SitterCard2;

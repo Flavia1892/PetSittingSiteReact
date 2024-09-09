@@ -3,59 +3,53 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CookiesProvider, useCookies } from "react-cookie";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, child, get, set, push } from "firebase/database";
-import data from "../props/SittersData";
 import uuid from "react-uuid";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-//
+import Modal from "react-bootstrap/Modal";
 
 function FormSubmit(sitterObj) {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    setShow(false);
+    navigate("homepage");
+  };
+  //Stuff to hide API_KEY and access it
+
+  const myApiKey = process.env.REACT_APP_API_KEY;
+  const myAppId = process.env.REACT_APP_APP_ID;
+  const myDBURL = process.env.REACT_APP_DB_URL;
+
+  //end of stuff
 
   const firebaseConfig = {
-    apiKey: "AIzaSyCgwdyYKBF7K0eM0IftPQyPCz2yi-oR2ug",
+    apiKey: myApiKey,
     authDomain: "flaviapetsittersunited.firebaseapp.com",
     projectId: "flaviapetsittersunited",
     storageBucket: "flaviapetsittersunited.appspot.com",
     messagingSenderId: "851943201993",
-    appId: "1:851943201993:web:c6837ffb6066cfe97e0118",
+    appId: myAppId,
     measurementId: "G-MEPWC7FBLQ",
-    databaseURL:
-      "https://flaviapetsittersunited-default-rtdb.europe-west1.firebasedatabase.app",
+    databaseURL: myDBURL,
   };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   const db = getDatabase(app);
 
-  //reading the datatbase
+  //function to connect to database
   const dbRef = ref(getDatabase(app));
-  //console.log(getDatabase(app).app);
-  // get(child(dbRef, `book`))
-  //   .then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       console.log(snapshot.val());
-  //     } else {
-  //       console.log("No data available");
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     console.error(error);
-  //   });
 
   //function to write a booking in database
   function writeBookingData(id, data) {
     set(ref(db, "booking/" + id), data);
   }
-  // function writeUserDataSitter(id, data) {
-  //   set(ref(db, "sitter/" + id), data);
-  // }
 
-  const navigate = useNavigate();
   let [cookies, setCookie] = useCookies(["firstname", "lastname"]);
 
   let sitter = sitterObj.sitterObj;
@@ -65,6 +59,9 @@ function FormSubmit(sitterObj) {
   let [phone, setPhone] = useState("");
   let [email, setEmail] = useState("");
   let [fullAdress, setFullAdress] = useState("");
+  let [time, setTime] = useState("");
+  let [petType, setPetType] = useState("");
+
   let cancelCourse = () => {
     document.getElementById("form-submit").reset();
     setStartDate(null);
@@ -82,13 +79,16 @@ function FormSubmit(sitterObj) {
       lastName: lastName,
       phone: phone,
       email: email,
+      petType: petType,
       fullAdress: fullAdress,
       sitterID: sitter.id.value,
       sitterFirstName: sitter.name.first,
       sitterLastName: sitter.name.last,
       startDate: startDate,
       endDate: endDate,
+      time: time,
     };
+    setShow(true);
     writeBookingData(uuid(), bookingInfo);
     cancelCourse();
   };
@@ -127,6 +127,7 @@ function FormSubmit(sitterObj) {
             <input
               class="border-2"
               type="text"
+              placeholder="ex:0721445386"
               onChange={(event) => {
                 setPhone(event.target.value);
               }}
@@ -140,6 +141,18 @@ function FormSubmit(sitterObj) {
               type="text"
               onChange={(event) => {
                 setEmail(event.target.value);
+              }}
+            />
+          </label>
+          <br></br>
+          <label class="text-lg mb-3">
+            Pet type:
+            <input
+              class="border-2"
+              type="text"
+              placeholder="E.g: cat, dog, fish"
+              onChange={(event) => {
+                setPetType(event.target.value);
               }}
             />
           </label>
@@ -164,7 +177,7 @@ function FormSubmit(sitterObj) {
             <DatePicker
               selected={startDate}
               onChange={(date) => {
-                setStartDate(date);
+                setStartDate(date.toString());
               }}
               minDate={new Date()}
               //maxDate={new Date().setMonth(new Date().getMonth() + 1)}
@@ -177,7 +190,7 @@ function FormSubmit(sitterObj) {
             <DatePicker
               selected={endDate}
               onChange={(date) => {
-                setEndDate(date);
+                setEndDate(date.toString());
               }}
               minDate={new Date() + 1}
               //maxDate={new Date().setMonth(new Date().getMonth() + 1)}
@@ -185,12 +198,62 @@ function FormSubmit(sitterObj) {
             />
           </labe>{" "}
           <br></br>
+          <label class="text-lg mb-3 mt-4">
+            <p>
+              Please choose a time periode:
+              <label>
+                <input
+                  type="radio"
+                  name="myRadio"
+                  value="morning"
+                  onClick={() => {
+                    setTime("morning");
+                  }}
+                />{" "}
+                Morning
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="myRadio"
+                  value="afternoon"
+                  onClick={() => {
+                    setTime("afternoon");
+                  }}
+                />{" "}
+                Afternoon
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="myRadio"
+                  value="evening"
+                  onClick={() => {
+                    setTime("evening");
+                  }}
+                />{" "}
+                Evening
+              </label>
+            </p>
+          </label>
+          <br></br>
           <input
             class="text-lg mt-3 mb-3 bg-blue-600 text-white pt-1 pb-1 pl-1 pr-1 rounded-lg"
             type="submit"
           />
         </form>
       </div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Success!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Booking has been sucessfully made. Please await telephonic
+          confirmation<br></br>
+          We thank you for chosing us!
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
