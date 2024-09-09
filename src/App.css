@@ -339,4 +339,8 @@ div.transbox {
   .titleHome {
     font-size: 30px;
   }
+  #buttonSitter{
+    font-size: 20px;
+    margin-top:20px;
+  }
 }

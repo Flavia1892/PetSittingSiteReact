@@ -9,7 +9,6 @@ function SitterCard(person) {
 
   let id = person.id.value;
   let favoriteSitters = JSON.parse(localStorage.getItem("savedSitters"));
-  
 
   return (
     <div className="sittercard">
@@ -76,28 +75,30 @@ function SitterCard(person) {
                     localStorage.getItem("savedSitters")
                   );
                   if (lastList === null) lastList = [];
-                  else{
-                  for (let key in lastList) {
-                    if (lastList[key].id.value === id) {
-                      isDuplicate = true;
-                      alert("Sitter already saved");
+                  else {
+                    for (let key in lastList) {
+                      if (lastList[key].id.value === id) {
+                        isDuplicate = true;
+                        alert("Sitter already saved");
+                      }
                     }
-                  }
 
-                  if (isDuplicate == false) {
-                    lastList.push(person);
-                    localStorage.setItem(
-                      "savedSitters",
-                      JSON.stringify(lastList)
-                    );
-                    lastList = [];
-                    let arra = JSON.parse(localStorage.getItem("savedSitters"));
+                    if (isDuplicate == false) {
+                      lastList.push(person);
+                      localStorage.setItem(
+                        "savedSitters",
+                        JSON.stringify(lastList)
+                      );
+                      lastList = [];
+                      let arra = JSON.parse(
+                        localStorage.getItem("savedSitters")
+                      );
 
-                    console.log(arra);
-                    alert("Sitter Saved!");
+                      console.log(arra);
+                      alert("Sitter Saved!");
+                    }
+                    isDuplicate = false;
                   }
-                  isDuplicate = false;
-                }
                 }}
               >
                 Add to favorites

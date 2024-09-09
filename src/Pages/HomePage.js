@@ -35,10 +35,10 @@ function HomePage() {
 
   const handleClose = () => {
     setShow(false);
-    sessionStorage.setItem("modalDisplayed", "true");
+    //sessionStorage.setItem("modalDisplayed", "true");
   };
 
-  const modalDisplayed = sessionStorage.getItem("modalDisplayed");
+  //const modalDisplayed = sessionStorage.getItem("modalDisplayed");
 
   //Modal for success Message at cookie agreement
   const [success, setSuccess] = useState(false);
@@ -185,7 +185,7 @@ function HomePage() {
           className="modal show"
           style={{ display: "block", position: "initial" }}
         >
-          {!modalDisplayed && (
+          
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>Cookie Agreement</Modal.Title>
@@ -217,7 +217,7 @@ function HomePage() {
                 </Button>
               </Modal.Footer>
             </Modal>
-          )}
+       
         </div>
         <Modal show={success} onHide={handleFail}>
           <Modal.Header closeButton>
