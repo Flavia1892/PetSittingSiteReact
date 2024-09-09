@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import data from "../props/mockDataPrices";
+import people from "../props/SittersData";
+import { useState } from "react";
+import { useRef } from "react";
 
 function Navbar() {
   const navigate = useNavigate();
+  const inputText = useRef(null);
+
   let id = data.prices[0].id;
+
+  let sittersList = people.persons;
+
+  let [filteredSitters, setPetSitters] = useState(sittersList);
+  let [searchVal, setSearchVal] = useState(" ");
+
+  function handleSearchClick() {
+    if (searchVal === " ") {
+      setPetSitters(sittersList);
+    } else {
+      let filterBySearch = sittersList.filter((item) => {
+        if (
+          item.name.first
+            .toLocaleLowerCase()
+            .includes(searchVal.toLocaleLowerCase()) ||
+          item.name.last
+            .toLocaleLowerCase()
+            .includes(searchVal.toLocaleLowerCase()) ||
+          item.preference
+            .toLocaleLowerCase()
+            .includes(searchVal.toLocaleLowerCase())
+        ) {
+          return item;
+        }
+      });
+      setPetSitters(filterBySearch);
+    }
+  }
+
+  function handleReset() {
+    if (inputText.current) {
+      inputText.current.value = "";
+      inputText.current.type = "text";
+    }
+  }
   return (
     <>
       <div className="containerNav">
@@ -75,6 +115,26 @@ function Navbar() {
             Contact
           </Link>
         </div>
+      </div>
+      <div class="rowNav">
+        <input
+          ref={inputText}
+          onChange={(e) => {
+            setSearchVal(e.target.value);
+            handleSearchClick();
+          }}
+          onKeyDown={(e) => {
+            if (e.code === "Enter") {
+              navigate("/searchsittersvalue", { state: filteredSitters });
+              localStorage.setItem("searchedWords", JSON.stringify(searchVal));
+              handleReset();
+            }
+          }}
+          className="form-control mr-sm-2"
+          type="search"
+          placeholder="Search sitter here"
+          aria-label="Search"
+        ></input>
       </div>
     </>
   );
