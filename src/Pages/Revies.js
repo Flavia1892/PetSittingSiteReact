@@ -48,9 +48,7 @@ function Revies() {
     ar = JSON.parse(JSON.stringify(snapshot.val()));
   });
 
-  console.log(ar);
-
-  let reviewArr=[];
+  let reviewArr = [];
   for (let key in ar) {
     reviewArr.push(ar[key]);
   }
@@ -60,6 +58,23 @@ function Revies() {
   setTimeout(() => {
     setIsLoading(false);
   }, 2000);
+  let [category, setCategory] = useState("all");
+
+  let handleChange = (event) => {
+    setCategory(event.target.value);
+  };
+  function handleClick() {
+    if (category === "all") {
+    } else {
+      let arrOfFilteredSitters = [];
+      for (let key in reviewArr)
+        if (reviewArr[key].stars === Number(category))
+          arrOfFilteredSitters.push(reviewArr[key]);
+
+      reviewArr = arrOfFilteredSitters;
+    }
+  }
+
   return (
     <>
       {isLoading ? (
@@ -83,16 +98,28 @@ function Revies() {
             <div class="row font-bold text-5xl justify-center pt-2 mb-3 mt-4 sitterTitle">
               Reviews
             </div>
+            <div class="text-lg">
+              <p class="underline">Filter by star number:</p>
+              <select value={category} onChange={handleChange}>
+                <option value="all">All</option>
+                <option value="5" onClick={handleClick()}>
+                  5
+                </option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+
             <div class="rowSitters pb-6 pt-5">
-            {reviewArr.map((review) => {
-              return <ReviewCard {...review} />;
-            })}
-          </div>
+              {reviewArr.map((review) => {
+                return <ReviewCard {...review} />;
+              })}
+            </div>
           </div>
           <img src={paw} width="600px" class="m-auto"></img>
-          
         </div>
-       
       )}
     </>
   );
