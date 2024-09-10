@@ -14,6 +14,8 @@ import Booking from "./Pages/Booking";
 import BookingsShow from "./Pages/BookingsShow";
 import SearchSittersValue from "./Pages/SearchSittersValue";
 import FavoriteSitters from "./Pages/FavoriteSitters";
+import FormReview from "./Pages/FormReview";
+import Revies from "./Pages/Revies";
 import React from "react";
 import {
   Route,
@@ -39,6 +41,8 @@ const router = createBrowserRouter(
       <Route path="/pricepage/:id" element={<Price />} />
       <Route path="book" element={<Booking />} />
       <Route path="bookingsshow" element={<BookingsShow />} />
+      <Route path="/formreview" element={<FormReview/>} />
+      <Route path="/reviews" element={<Revies/>} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

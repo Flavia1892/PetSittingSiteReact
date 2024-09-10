@@ -96,8 +96,6 @@ function SitterCard(person) {
                       }
                     }
 
-                    if (isDuplicate == true) message = "Sitter already saved";
-
                     if (isDuplicate == false) {
                       lastList.push(person);
                       localStorage.setItem(
@@ -113,7 +111,6 @@ function SitterCard(person) {
                     }
                     handleOpen();
                     isDuplicate = false;
-                    
                   }}
                 >
                   Add to favorites

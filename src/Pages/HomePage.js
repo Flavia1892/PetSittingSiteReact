@@ -13,6 +13,19 @@ import img4 from "../props/carousel/cat4.jpg";
 import img5 from "../props/blackcat.webp";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import ReviewCard from "../Components/ReviewCard";
+import {
+  getDatabase,
+  ref,
+  child,
+  get,
+  set,
+  push,
+  onValue,
+} from "firebase/database";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { useLocation } from "react-router-dom";
 
 function HomePage() {
   const images = [`${img1}`, `${img2}`, `${img3}`, `${img4}`, `${img5}`];
@@ -58,12 +71,65 @@ function HomePage() {
     setReveal(false);
   };
 
+  //Acess DB data for show
+  //Stuff to hide API_KEY and access it
+
+  const myApiKey = process.env.REACT_APP_API_KEY;
+  const myAppId = process.env.REACT_APP_APP_ID;
+  const myDBURL = process.env.REACT_APP_DB_URL;
+
+  //end of stuff
+  const firebaseConfig = {
+    apiKey: myApiKey,
+    authDomain: "flaviapetsittersunited.firebaseapp.com",
+    projectId: "flaviapetsittersunited",
+    storageBucket: "flaviapetsittersunited.appspot.com",
+    messagingSenderId: "851943201993",
+    appId: myAppId,
+    measurementId: "G-MEPWC7FBLQ",
+    databaseURL: myDBURL,
+  };
+
+  const { state } = useLocation();
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  //reading the datatbase
+  const dbRef = ref(getDatabase(app));
+
+  let ar = [];
+  onValue(ref(db, "reviews"), (snapshot) => {
+    ar = JSON.parse(JSON.stringify(snapshot.val()));
+  });
+
+  console.log(ar);
+
+  let reviewArr = [];
+  for (let key in ar) {
+    reviewArr.push(ar[key]);
+  }
+  let reviewArrShort = reviewArr.slice(0, 3);
+
+  //End
+
   return (
     <>
       <div>
         <p className="text-6xl text-center mt-3 mb-3 pt-3 pb-3 font-bold titleHome">
           Your solution for professional loving pet care!
         </p>
+        <div class="mt-4 text-center">
+          <button
+            type="button"
+            class="font-bold text-3xl bg-blue-700 text-white rounded-xl pt-2 pb-2 pl-2 pr-2 hover:bg-blue-900"
+            onClick={() => {
+              navigate("/reviews");
+            }}
+          >
+            Our reviews
+          </button>
+        </div>
         <div class="container">
           <div class="row  pt-3 pb-3">
             <div class="col ">
@@ -155,7 +221,9 @@ function HomePage() {
               onClick={() => {
                 navigate("/favoritesitters");
               }}
-            >See favorite Sitters</button>
+            >
+              See favorite Sitters
+            </button>
           </div>
 
           <div class="border-2 border-gray-300 mt-5">
@@ -167,6 +235,25 @@ function HomePage() {
               Our pet sitters and dog walkers are qualified professionals and
               look forward to caring for your dogs, cats, and small pets.
             </p>
+          </div>
+          <div class="text-center">
+            <button
+              type="button"
+              class="text-3xl bg-blue-700 text-white pt-2 pb-2 pl-2 pr-2 mt-4 rounded-xl"
+              onClick={() => {
+                navigate("/formreview");
+              }}
+            >
+              Write a review
+            </button>
+          </div>
+          <div>
+            <div class="font-bold text-3xl underline mt-3 ">What our clients say</div>
+            <div class="rowSitters pb-5 pt-5 mt-5">
+              {reviewArrShort.map((review) => {
+                return <ReviewCard {...review} />;
+              })}
+            </div>
           </div>
         </div>
 
