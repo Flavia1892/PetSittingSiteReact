@@ -1,16 +1,23 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 
 function SitterCard2(person) {
   const navigate = useNavigate();
   let name = person.name;
 
   let id = person.id.value;
- 
+
   let favoriteSitters = JSON.parse(localStorage.getItem("savedSitters"));
+
+  const [show, setShow] = useState(false);
+
+  const handleOpen = () => {
+    setShow(true);
+  };
 
   return (
     <div className="sittercard">
@@ -67,22 +74,33 @@ function SitterCard2(person) {
               </button>
             </div>
             <Card.Text>
-              <button
-                type="button"
-                class="bg-red-600 font-bold text-xl pt-1 pb-2 pl-2 pr-2 mt-4 rounded-xl"
-                onClick={() => {
-                  let id = person.id.value;
-                  let arra = JSON.parse(localStorage.getItem("savedSitters"));
-                  for (let key in arra) {
-                    if (arra[key].id.value === id) arra.splice(key, 1);
-                  }
-                  localStorage.setItem("savedSitters", JSON.stringify(arra));
-                  alert("Sitter removed from list");
-                  window.location.reload();
-                }}
-              >
-                Delete
-              </button>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="bg-red-600 font-bold text-xl pt-1 pb-2 pl-2 pr-2 mt-4 rounded-xl"
+                  onClick={() => {
+                    let id = person.id.value;
+                    let arra = JSON.parse(localStorage.getItem("savedSitters"));
+                    for (let key in arra) {
+                      if (arra[key].id.value === id) arra.splice(key, 1);
+                    }
+                    localStorage.setItem("savedSitters", JSON.stringify(arra));
+                    handleOpen();
+
+                    setTimeout(() => {
+                      window.location.reload();
+                    }, 1100);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+
+              <Modal show={show}>
+                <Modal.Header>
+                  <Modal.Title>Sitter removed from favorites</Modal.Title>
+                </Modal.Header>
+              </Modal>
             </Card.Text>
           </Card.Body>
         </Card>

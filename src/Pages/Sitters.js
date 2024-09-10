@@ -116,7 +116,7 @@ function Sitters() {
             <button
               type="button"
               id="buttonSitter"
-              class="font-bold text-4xl bg-green-600 pt-1 pb-1 pl-2 pr-2 rounded-xl mb-4 border-2 border-black hover:bg-green-700"
+              class="font-bold text-4xl bg-green-700 text-white pt-1 pb-1 pl-2 pr-2 rounded-xl mb-4 border-2 border-black hover:bg-green-900"
               onClick={() => {
                 navigate("/favoritesitters");
               }}

@@ -2,6 +2,8 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
 function SitterCard(person) {
   const navigate = useNavigate();
@@ -9,6 +11,17 @@ function SitterCard(person) {
 
   let id = person.id.value;
   let favoriteSitters = JSON.parse(localStorage.getItem("savedSitters"));
+
+  const [show, setShow] = useState(false);
+
+  const handleOpen = () => {
+    setShow(true);
+  };
+  const handleClose = () => {
+    setShow(false);
+  };
+
+  let message = "Sitter saved to favorite list";
 
   return (
     <div className="sittercard">
@@ -65,23 +78,25 @@ function SitterCard(person) {
               </button>
             </div>
             <Card.Text>
-              <button
-                type="button"
-                class="bg-green-600 font-bold text-lg mt-3 pt-1 pb-1 pl-1 pr-1 rounded-lg hover:bg-green-700"
-                onClick={() => {
-                  let isDuplicate = false;
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="text-white bg-blue-500 pt-1 pb-2 pl-2 pr-2 rounded-md ml-3 mt-4"
+                  onClick={() => {
+                    let isDuplicate = false;
 
-                  let lastList = JSON.parse(
-                    localStorage.getItem("savedSitters")
-                  );
-                  if (lastList === null) lastList = [];
-                 
+                    let lastList = JSON.parse(
+                      localStorage.getItem("savedSitters")
+                    );
+                    if (lastList === null) lastList = [];
+
                     for (let key in lastList) {
                       if (lastList[key].id.value === id) {
                         isDuplicate = true;
-                        alert("Sitter already saved");
                       }
                     }
+
+                    if (isDuplicate == true) message = "Sitter already saved";
 
                     if (isDuplicate == false) {
                       lastList.push(person);
@@ -95,14 +110,20 @@ function SitterCard(person) {
                       );
 
                       console.log(arra);
-                      alert("Sitter Saved!");
                     }
+                    handleOpen();
                     isDuplicate = false;
-                  
-                }}
-              >
-                Add to favorites
-              </button>
+                    
+                  }}
+                >
+                  Add to favorites
+                </button>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>{message}</Modal.Title>
+                  </Modal.Header>
+                </Modal>
+              </div>
             </Card.Text>
           </Card.Body>
         </Card>

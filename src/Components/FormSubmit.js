@@ -17,7 +17,7 @@ function FormSubmit(sitterObj) {
 
   const handleClose = () => {
     setShow(false);
-    navigate("homepage");
+    navigate("/homepage");
   };
   //Stuff to hide API_KEY and access it
 
@@ -91,6 +91,7 @@ function FormSubmit(sitterObj) {
     setShow(true);
     writeBookingData(uuid(), bookingInfo);
     cancelCourse();
+    
   };
 
   return (

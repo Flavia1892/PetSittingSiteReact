@@ -1,11 +1,15 @@
 import React from "react";
 import FormSubmit from "../Components/FormSubmit";
 import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import paw from "../props/paw.webp";
 
 function Booking() {
   let { state } = useLocation();
   let sitterObj = state;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>
