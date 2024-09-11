@@ -118,6 +118,7 @@ function Navbar() {
       </div>
       <div class="rowNav">
         <input
+          enterkeyhint="done"
           ref={inputText}
           onChange={(e) => {
             setSearchVal(e.target.value);
