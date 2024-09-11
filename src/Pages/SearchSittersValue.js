@@ -82,7 +82,7 @@ function SearchSittersValue() {
       ) : (
         <div>
           <div class="container sitterContainer">
-            <div class="row font-bold text-5xl justify-center pt-2 mb-3 mt-4 sitterTitle">
+            <div class="row font-bold text-5xl justify-center pt-2 mb-3 mt-5 sitterTitle">
               You searched for:{localStorage.getItem("searchedWords")}
             </div>
 

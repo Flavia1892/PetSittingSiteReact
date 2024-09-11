@@ -46,6 +46,13 @@ function Navbar() {
       inputText.current.type = "text";
     }
   }
+
+  function doSearch() {
+    navigate("/searchsittersvalue", { state: filteredSitters });
+    localStorage.setItem("searchedWords", JSON.stringify(searchVal));
+    handleReset();
+  }
+
   return (
     <>
       <div className="containerNav">
@@ -116,7 +123,8 @@ function Navbar() {
           </Link>
         </div>
       </div>
-      <div class="rowNav">
+      <div class="searchNav">
+      
         <input
           enterkeyhint="done"
           ref={inputText}
@@ -126,9 +134,7 @@ function Navbar() {
           }}
           onKeyDown={(e) => {
             if (e.code === "Enter") {
-              navigate("/searchsittersvalue", { state: filteredSitters });
-              localStorage.setItem("searchedWords", JSON.stringify(searchVal));
-              handleReset();
+              doSearch();
             }
           }}
           className="form-control mr-sm-2"
@@ -136,6 +142,11 @@ function Navbar() {
           placeholder="Search sitter here"
           aria-label="Search"
         ></input>
+        <div>
+          <button onClick={doSearch} type="submit" class=" border-1 border-black pt-1 pb-1 pl-1 pr-1 rounded-xl">
+            Search
+          </button>
+        </div>
       </div>
     </>
   );
