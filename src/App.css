@@ -54,6 +54,22 @@
   border: 2px solid black;
 }
 
+.searchNav{
+  background-image: linear-gradient(
+    to right,
+    rgb(232, 182, 121),
+    rgb(215, 179, 131),
+    rgb(224, 198, 149),
+    rgb(255, 254, 252)
+  );
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+
 .colNav {
   display: flex;
   flex-grow: 1;
