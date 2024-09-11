@@ -54,7 +54,7 @@
   border: 2px solid black;
 }
 
-.searchNav{
+.searchNav {
   background-image: linear-gradient(
     to right,
     rgb(232, 182, 121),
@@ -67,7 +67,7 @@
   flex-direction: row;
   align-items: center;
   padding-top: 10px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .colNav {
@@ -313,8 +313,6 @@ div.transbox {
   font-weight: bold;
 }
 
-
-
 @media screen and (min-height: 500px) {
   .rowSitters {
     padding-bottom: 270px;
@@ -331,8 +329,11 @@ div.transbox {
     height: 300px;
   }
   .overlay {
-    font-size: 10px;
-    height: 50%;
+    font-size: 8px;
+    
+  }
+  #founderWritting {
+    font-size: 0px;
   }
   .colNav {
     font-size: 12px;
@@ -355,8 +356,8 @@ div.transbox {
   .titleHome {
     font-size: 30px;
   }
-  #buttonSitter{
+  #buttonSitter {
     font-size: 20px;
-    margin-top:20px;
+    margin-top: 20px;
   }
 }

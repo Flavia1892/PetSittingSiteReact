@@ -82,7 +82,7 @@ function AboutUs() {
                   United.
                 </div>
               </div>
-              <p class="pb-4 founderWrite">
+              <p class="pb-4 founderWrite" id="founderWritting">
                 <b>Flavia Bobeica</b>-founder of Pet Sitters United<br></br>
                 Doctor in Epidemiology, cat mom, coffee, wine<br></br> and cake
                 enthuziast
@@ -102,7 +102,7 @@ function AboutUs() {
                   Hi, my name is Blacky and I am the owner of the slave before
                 </div>
               </div>
-              <p class="pb-4 founderWrite">
+              <p class="pb-4 founderWrite" id="founderWritting">
                 <b>Blacky Bobeica</b>-co-founder of Pet Sitters United
                 <br></br>
                 CEO, CFO, Majestic Black Demon, destroyer of cables,<br></br>{" "}
