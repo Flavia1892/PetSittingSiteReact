@@ -133,7 +133,7 @@ function Navbar() {
             handleSearchClick();
           }}
           onKeyDown={(e) => {
-            if (e.code === "Enter") {
+            if (e.key === "Enter") {
               doSearch();
             }
           }}
