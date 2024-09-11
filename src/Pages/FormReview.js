@@ -10,12 +10,11 @@ import Modal from "react-bootstrap/Modal";
 import paw from "../props/paw.avif";
 import { Rating } from "primereact/rating";
 
-
 function FormReview() {
   const [value, setValue] = useState(null);
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
@@ -95,6 +94,7 @@ function FormReview() {
             </div>
           </label>
           <br></br>
+
           <label class="text-lg mb-3">
             Ttile:
             <input
@@ -162,7 +162,7 @@ function FormReview() {
               class="border-2"
               name="reviewMessage"
               rows={6}
-              cols={50}
+              cols={30}
               onChange={(event) => {
                 setMessage(event.target.value);
               }}
