@@ -67,19 +67,25 @@ function Contact() {
           <br></br>
           <div>
             <Card>
-              <Card.Header as="h5">How to get in touch with us</Card.Header>
-              <Card.Body>
-                <Card.Title>Our Location</Card.Title>
-                <Card.Text>Str Arbustilor nr 5 bloc 134 sc B apt 34</Card.Text>
-                <Card.Text>
-                  {" "}
-                  Our headquarters is situated in the Steagu/Astra area of
-                  Brasov, right next to the Town General Hospital.
-                </Card.Text>
-                <APIProvider apiKey={myAPIKEYCONTACT}>
-                  <CustomMap />
-                </APIProvider>
-              </Card.Body>
+              <div class="text-center">
+                <Card.Header as="h5">How to get in touch with us</Card.Header>
+                <Card.Body>
+                  <Card.Title>Our Location</Card.Title>
+                  <Card.Text>
+                    Str Arbustilor nr 5 bloc 134 sc B apt 34
+                  </Card.Text>
+                  <Card.Text>
+                    {" "}
+                    Our headquarters is situated in the Steagu/Astra area of
+                    Brasov, right next to the Town General Hospital.
+                  </Card.Text>
+                  <APIProvider apiKey={myAPIKEYCONTACT}>
+                    <div class="flex justify-center">
+                      <CustomMap />
+                    </div>
+                  </APIProvider>
+                </Card.Body>
+              </div>
             </Card>
           </div>
         </div>
