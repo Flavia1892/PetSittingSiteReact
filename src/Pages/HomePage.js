@@ -122,7 +122,7 @@ function HomePage() {
         <div class="mt-4 text-center">
           <button
             type="button"
-            class="font-bold text-3xl bg-blue-700 text-white rounded-xl pt-2 pb-2 pl-2 pr-2 hover:bg-blue-900"
+            class="font-bold text-3xl bg-amber-600 text-white rounded-xl pt-2 pb-2 pl-2 pr-2 hover:bg-amber-900"
             onClick={() => {
               navigate("/reviews");
             }}
@@ -196,7 +196,7 @@ function HomePage() {
           <div class="flex justify-center">
             <button
               type="button"
-              class="font-bold text-xl pt-3 pb-3 pl-2 pr-2 border-2  border-black rounded-xl bg-blue-900 text-white mt-5 hover:bg-blue-500"
+              class="font-bold text-xl pt-3 pb-3 pl-2 pr-2 border-2  border-black rounded-xl bg-amber-600 text-white mt-5 hover:bg-amber-900"
               onClick={handleOpen}
             >
               Become a Pet Sitter
@@ -239,7 +239,7 @@ function HomePage() {
           <div class="text-center">
             <button
               type="button"
-              class="text-3xl bg-blue-700 text-white pt-2 pb-2 pl-2 pr-2 mt-4 rounded-xl"
+              class="text-3xl bg-amber-600 text-white pt-2 pb-2 pl-2 pr-2 mt-4 rounded-xl hover:bg-amber-900"
               onClick={() => {
                 navigate("/formreview");
               }}
